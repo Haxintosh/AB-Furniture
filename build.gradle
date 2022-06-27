@@ -33,7 +33,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                ab_funiture {
+                ab_furniture {
                     source sourceSets.main
                 }
             }
@@ -45,7 +45,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                ab_funiture {
+                ab_furniture {
                     source sourceSets.main
                 }
             }
@@ -60,7 +60,7 @@ minecraft {
             args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                ab_funiture {
+                ab_furniture {
                     source sourceSets.main
                 }
             }
