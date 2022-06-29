@@ -1,5 +1,6 @@
 package com.haxintosh.ab_furniture;
 
+import com.haxintosh.ab_furniture.init.blockInit;
 import com.haxintosh.ab_furniture.init.itemInit;
 
 import net.minecraft.item.ItemGroup;
@@ -10,8 +11,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.lwjgl.system.CallbackI;
 
+// TODO: fix item texture when holding in hand, change model & textures to final drawer
 @Mod("ab_furniture")
 public class furniture{
     public static final String MOD_ID = "ab_furniture";
@@ -24,10 +25,11 @@ public class furniture{
         }
     };
 
-    // register items
+    // register
     public furniture(){
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         itemInit.ITEMS.register(bus);
+        blockInit.BLOCKS.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
