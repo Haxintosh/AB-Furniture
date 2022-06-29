@@ -15,7 +15,7 @@ import org.lwjgl.system.CallbackI;
 @Mod("ab_furniture")
 public class furniture{
     public static final String MOD_ID = "ab_furniture";
-    //create tab
+    // adds creative tab for the mod
     public static final ItemGroup FURNITURE_TAB = new ItemGroup(MOD_ID) {
         @Override
         @OnlyIn(Dist.CLIENT)
@@ -23,9 +23,12 @@ public class furniture{
             return new ItemStack(itemInit.improved_wood.get());
         }
     };
+
+    // register items
     public furniture(){
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         itemInit.ITEMS.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
     }
+
 }
